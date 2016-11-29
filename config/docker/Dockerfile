@@ -1,23 +1,15 @@
-FROM nginx:1.11.5
-MAINTAINER maintainer@email.com
+FROM mhart/alpine-node:7
+# FROM node:latest
+MAINTAINER [Rhio Kim <rhio.kim@gmail.com>]
 
-WORKDIR /etc/nginx
+#copy package first to cache npm-install and speed up build
+COPY server server
+COPY build www
 
-# Remove default conf
-RUN rm -v nginx.conf
+WORKDIR server
+RUN npm --quiet --no-color install
+RUN npm cache clear
 
-# Copy nginx.conf and mime.types
-COPY config/nginx /etc/nginx/
+EXPOSE 8082
 
-# Copy entrypoint
-# COPY build-tools/scripts/docker-entrypoint.sh /entrypoint.sh
-# RUN chmod +x /entrypoint.sh
-
-# Copy application
-COPY build/ /usr/share/nginx/html/
-
-# ENTRYPOINT ["/entrypoint.sh"]
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]
