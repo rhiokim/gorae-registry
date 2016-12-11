@@ -27,5 +27,8 @@ $ npm run docker:rm     // remove running container
 $ npm run docker        // run build, rm, run at once
 ```
 
+## References
+- https://docs.docker.com/registry/spec/api/
+
 ## License
 MIT

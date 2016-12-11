@@ -91,7 +91,7 @@ html, body {
 .mdl-layout__header #add {
   position: absolute;
   right: 40px;
-  top: 106px;
+  top: 43px;
   z-index: 999;
 }
 .mdl-demo .mdl-layout__content {
@@ -106,7 +106,6 @@ html, body {
   max-width: 90%;
   margin-bottom: 50px;
   position: relative;
-  margin-bottom: 48px;
 }
 .mdl-demo #features section.section--center {
   max-width: 620px;
@@ -254,8 +253,36 @@ html, body {
     margin-left: -24px;
 }
 
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
 .mb-20 {
   margin-bottom: 20px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mt-40 {
+  margin-top: 40px;
 }
 
 .no-margin {
@@ -276,9 +303,9 @@ html, body {
 /* search bar */
 
 .mdl-cell .mdl-textfield {
-  position: absolute;
+  /*position: absolute;*/
   padding: 0;
-  right: 0;
+  /*right: 0;*/
 }
 
 .mdl-cell .mdl-textfield--expandable.is-focused {
@@ -303,19 +330,24 @@ html, body {
 /* table */
 td {
   max-width: 60px;
+  min-width: 30px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.td50 {
+  min-width: 50px;
+}
 .td100 {
   min-width: 100px;
 }
-
 .td150 {
   min-width: 150px;
 }
-
+.td200 {
+  min-width: 200px;
+}
 .td250 {
   min-width: 250px;
 }
@@ -416,4 +448,59 @@ td {
 .pagination-sm > li:last-child > span {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+/**
+ *
+ */
+.chk-display-all {
+  width: 100px;
+}
+
+.chk-display-all .mdl-checkbox__box-outline {
+  border: 2px solid rgba(255,255,255, 0.8);
+}
+
+.chk-display-all.mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+  border: 2px solid rgba(255,255,255, 1);
+}
+.chk-display-all.mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
+  background-color: rgba(255,255,255, 1);
+}
+
+/**
+ * time and date picker
+ */
+.rdtPicker {
+  font-size: .8rem;
+  border: 0;
+  margin-top: 3px;
+  margin-left: 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+/**
+ * clarefy chart
+ */
+div.ruler-row div.mark {
+  padding: 0;
+  border-radius: 0;
+}
+
+.default .painted {
+  background-color: #AED581;
+}
+.default .empty {
+  background-color: #EAEAEA;
+}
+.default .line {
+  border: .01em solid rgba(67, 160, 71, 0.59);
+}
+.default .mark {
+  /*background: rgba(255, 87, 34, 0.66);*/
+}
+.ruler-container {
+  width: inherit;
+  height: inherit;
 }

@@ -5,7 +5,7 @@ import {routerMiddleware, routerReducer as routing} from 'react-router-redux';
 import {persistState} from 'redux-devtools';
 import createLogger from 'redux-logger';
 
-import articleReducer from '../reducers/article';
+import catalogReducer from '../reducers/catalog';
 import userReducer from '../reducers/user';
 
 import DevTools from '../DevTools';
@@ -18,7 +18,7 @@ const logger = createLogger({
 const router = routerMiddleware(hashHistory);
 
 const rootReducer = combineReducers({
-  articleReducer: articleReducer,
+  catalogReducer: catalogReducer,
   userReducer: userReducer,
   routing: routing,
 });

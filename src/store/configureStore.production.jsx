@@ -4,13 +4,13 @@ import {hashHistory} from 'react-router';
 import {routerMiddleware, routerReducer as routing} from 'react-router-redux';
 // import reducers from 'reducers';
 
-import articleReducer from '../reducers/article';
+import catalogReducer from '../reducers/catalog';
 import userReducer from '../reducers/user';
 
 const router = routerMiddleware(hashHistory);
 
 const rootReducer = combineReducers({
-  articleReducer: articleReducer,
+  catalogReducer: catalogReducer,
   userReducer: userReducer,
   routing: routing,
 });

@@ -14,9 +14,10 @@ import {syncHistoryWithStore} from 'react-router-redux';
 import routes from './routes';
 import configureStore from './store/configureStore';
 
+import './assets/less/main.less';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
-import './assets/css/normalize.css';
+// import './assets/css/normalize.css';
 import './assets/css/main.css';
 
 const store = configureStore();

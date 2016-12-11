@@ -1,12 +1,6 @@
+/* global pkginfo */
 import React from 'react';
-import {Link} from 'react-router';
 import Helmet from 'react-helmet';
-import {
-  Layout, Header, Content, Navigation,
-  Icon, Grid, Cell, HeaderRow, Drawer
-} from 'react-mdl';
-
-import './App.css';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -21,60 +15,29 @@ export default class App extends React.Component {
     const props = this.props;
 
     return (
-      <Layout>
+      <div>
         <Helmet
-          title={process.env.APP_NAME}
-          titleTemplate=" %s | React Boilerplate"
+          title={pkginfo.name}
+          titleTemplate=" %s | Gorae Swarm"
           meta={[
-            {name: 'description', content: process.env.APP_DESCRIPTION},
-            {name: 'version', content: process.env.APP_VERSION},
-            {name: 'product', content: process.env.APP_NAME},
-            {name: 'keywords', content: process.env.APP_KEYWORDS},
-            {name: 'author', content: process.env.APP_AUTHOR},
-            {name: 'license', content: process.env.APP_LICENSE}
+            {name: 'description', content: pkginfo.description},
+            {name: 'version', content: pkginfo.version},
+            {name: 'product', content: pkginfo.name},
+            {name: 'keywords', content: pkginfo.keywords},
+            {name: 'author', content: pkginfo.author},
+            {name: 'license', content: pkginfo.license},
+            {name: 'sha', content: pkginfo.sha}
           ]} />
-        <Header>
-          <HeaderRow title={<Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>React Boilerplate</Link>}>
-            <Navigation>
-              <Link to="b">Templates</Link>
-              <a href="https://github.com/rhiokim/react-boilerplate">
-                <Icon name="link" style={{ marginRight: '8px', verticalAlign: 'middle' }} />
-                  GitHub
-              </a>
-            </Navigation>
-          </HeaderRow>
-          <HeaderRow className="mdl-layout__header-second-menu">
-            <Navigation>
-              <Link to="/">Dashboard</Link>
-              <Link to="/users">User</Link>
-              <Link to="/articles">Article</Link>
-            </Navigation>
-          </HeaderRow>
-        </Header>
-        <Drawer title="Title">
-          <Navigation>
-            <a href="">Home</a>
-            <a href="">Profile</a>
-            <a href="">Hub</a>
-            <a href="">Link</a>
-          </Navigation>
-        </Drawer>
-        <Content className="mdl-color-text--grey-600 mdl-color--grey-50">
-          <Grid noSpacing>
-            <Cell col={12}>
-              {props.children}
-            </Cell>
-          </Grid>
-        </Content>
+        {props.children}
         {
-          (() => {
-            if (process.env.NODE_ENV === 'development') {
-              const DevTools = require('../DevTools').default;
-              return <DevTools />;
-            }
-          })()
+          // (() => {
+          //   if (process.env.NODE_ENV === 'development') {
+          //     const DevTools = require('../DevTools').default;
+          //     return <DevTools />;
+          //   }
+          // })()
         }
-      </Layout>
+      </div>
     );
   }
 }

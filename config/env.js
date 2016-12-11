@@ -34,6 +34,9 @@ function getClientEnvironment(publicUrl) {
       'NODE_ENV': JSON.stringify(
         process.env.NODE_ENV || 'development'
       ),
+      '__API__': JSON.stringify(
+        process.env.NODE_ENV === 'development' ? 'http://localhost:8082' : ''
+      ),
       // Useful for resolving the correct path to static assets in `public`.
       // For example, <img src={process.env.PUBLIC_URL + '/img/logo.png'} />.
       // This should only be used as an escape hatch. Normally you would put
