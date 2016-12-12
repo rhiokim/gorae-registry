@@ -36,6 +36,12 @@ export default class SideBar extends React.Component {
           <Link to="/settings">
             <Icon name="settings" /> settings
           </Link>
+          <Link to="/registry">
+            <Icon name="settings" /> registry
+          </Link>
+          <Link to="/sshkey">
+            <Icon name="settings" /> ssh-key
+          </Link>
         </Navigation>
       </Drawer>
     );
