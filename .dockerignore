@@ -10,3 +10,8 @@ src/
 .eslintignore
 .git*
 *.md
+
+server/media
+server/node_modules
+server/tmp
+server/.*

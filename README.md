@@ -27,6 +27,17 @@ $ npm run docker:rm     // remove running container
 $ npm run docker        // run build, rm, run at once
 ```
 
+### Run docker
+
+```bash
+$ docker run -dit -p 8084:8082 \
+  -e REGISTRY_HOST=10.0.1.2 \
+  -e REGISTRY_PORT=5000 \
+  -e GITHUB_SECRET=1234 \
+  --name gorae-registry \
+  gorae-registry:latest
+```
+
 ## References
 - https://docs.docker.com/registry/spec/api/
 

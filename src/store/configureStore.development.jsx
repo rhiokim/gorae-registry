@@ -7,6 +7,7 @@ import createLogger from 'redux-logger';
 
 import catalogReducer from '../reducers/catalog';
 import userReducer from '../reducers/user';
+import sshkeyReducer from '../reducers/sshkey';
 
 import DevTools from '../DevTools';
 
@@ -20,6 +21,7 @@ const router = routerMiddleware(hashHistory);
 const rootReducer = combineReducers({
   catalogReducer: catalogReducer,
   userReducer: userReducer,
+  sshkeyReducer: sshkeyReducer,
   routing: routing,
 });
 

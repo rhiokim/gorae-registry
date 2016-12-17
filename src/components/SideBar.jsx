@@ -33,13 +33,13 @@ export default class SideBar extends React.Component {
         </Navigation>
         <Navigation>
           <span>ADMIN</span>
-          <Link to="/settings">
-            <Icon name="settings" /> settings
+          <Link to="/settings/admin">
+            <Icon name="settings" /> admin
           </Link>
-          <Link to="/registry">
+          <Link to="/settings/registry">
             <Icon name="settings" /> registry
           </Link>
-          <Link to="/sshkey">
+          <Link to="/settings/sshkey">
             <Icon name="settings" /> ssh-key
           </Link>
         </Navigation>

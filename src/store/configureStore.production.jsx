@@ -6,12 +6,14 @@ import {routerMiddleware, routerReducer as routing} from 'react-router-redux';
 
 import catalogReducer from '../reducers/catalog';
 import userReducer from '../reducers/user';
+import sshkeyReducer from '../reducers/sshkey';
 
 const router = routerMiddleware(hashHistory);
 
 const rootReducer = combineReducers({
   catalogReducer: catalogReducer,
   userReducer: userReducer,
+  sshkeyReducer: sshkeyReducer,
   routing: routing,
 });
 

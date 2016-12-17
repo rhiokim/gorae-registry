@@ -6,6 +6,7 @@ import Home from './containers/Home';
 import Dashboard from './containers/Dashboard';
 import Settings from './containers/Settings';
 import Images from './components/images/Images';
+import SshKey from './components/settings/SshKey';
 
 export default (
   <Route path="/">
@@ -21,6 +22,7 @@ export default (
     </Route>
     <Route path="settings" component={Dashboard}>
       <IndexRoute component={Images} />
+      <Route path="sshkey" component={SshKey} />
     </Route>
   </Route>
 );
