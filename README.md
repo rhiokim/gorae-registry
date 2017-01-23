@@ -1,4 +1,4 @@
-# [![](media/gorae-registry-github-banner.png)](https://github.com/rhiokim/gorae-registry)
+# [![](media/gorae-registry.001.png)](https://github.com/rhiokim/gorae-registry)
 
 The `gorae-registry` project is web interface solution for a private docker registry using modern web technology.
 
